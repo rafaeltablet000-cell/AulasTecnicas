@@ -1,0 +1,58 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro vetor[21]
+        inteiro indice, i, somatorio = 0, maior, menor
+        real media
+
+        faca
+        {
+            escreva("Insira um índice entre 2 e 8: ")
+            leia(indice)
+            
+            se (indice < 2 ou indice > 8)
+            {
+                escreva("Índice inválido! Por favor, digite um valor entre 2 e 8.\n")
+            }
+        }
+        enquanto (indice < 2 ou indice > 8)
+
+        para (i = 0; i < 21; i++)
+        {
+            inteiro numero = 10 + i
+            vetor[i] = numero * indice
+        }
+
+        maior = vetor[0]
+        menor = vetor[0]
+
+        escreva("\n--- Vetor (do último ao primeiro índice) ---\n")
+        para (i = 20; i >= 0; i--)
+        {
+            escreva("Posição ", i, ": ", vetor[i], "\n")
+            
+            somatorio = somatorio + vetor[i]
+
+            se (vetor[i] > maior)
+            {
+                maior = vetor[i]
+            }
+
+            se (vetor[i] < menor)
+            {
+                menor = vetor[i]
+            }
+        }
+
+        // Correção feita aqui: multiplicamos por 1.0 para forçar a divisão real sem usar (real)
+        media = (somatorio * 1.0) / 21
+
+        escreva("\n----------------------------------------\n")
+        escreva("d) Somatório dos produtos: ", somatorio, "\n")
+        escreva("e) Maior produto: ", maior, "\n")
+        escreva("f) Menor produto: ", menor, "\n")
+        escreva("g) Média dos produtos: ", media, "\n")
+        escreva("----------------------------------------\n")
+    }
+}

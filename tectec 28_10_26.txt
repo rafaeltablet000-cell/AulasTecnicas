@@ -1,0 +1,26 @@
+programa
+{
+	funcao inicio ()
+	{
+		inteiro x, n, primo
+		escreva ("--- Digite um Numero: ---\n")
+		leia(n)
+		
+		x = 1
+		primo = 1
+		
+		escreva (n+ " é divisivel por ")
+		enquanto (x < n){
+			se ( n % x == 0){
+				escreva (x+" ")
+				primo++
+			}
+			x++
+		}
+    se ( primo <= 2){
+    	escreva ("\nO número "+n+" é Primo!")
+    }senao{
+    	escreva ("\nO número "+n+" não é primo,\ne foram encontrados "+primo+" divisores")
+    }
+	}
+}

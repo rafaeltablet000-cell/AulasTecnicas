@@ -1,0 +1,53 @@
+programa
+{
+	funcao inicio ()
+	{
+		inteiro resp, cont, num, a
+		
+		resp = 1
+		cont = 1
+		
+		
+		enquanto (resp == 1)
+		{
+			escreva("--- TESTE ", cont, " ---\n")
+			escreva("Digite um Número:\n")
+			leia(num)
+			
+			
+			se (num % 2 == 0)
+			{
+				para (a = 1; a <= 5; a++)
+				{
+					escreva(num + (a * 2), " • ")
+				}
+			}
+			
+			senao
+			{
+				para (a = 5; a >= 1; a--)
+				{
+					escreva(num - (a * 2), " • ")
+				}
+			}
+			
+			escreva("\n\nDeseja Continuar? \n1 - SIM \n2 - NÃO\n")
+			leia(resp)
+			
+			
+			enquanto (resp != 1 e resp != 2)
+			{
+				escreva("Resposta Inválida!\n")
+				escreva("Deseja Continuar? \n1 - SIM \n2 - NÃO\n")
+				leia(resp)
+			}
+			
+			se (resp == 1)
+			{
+				cont++
+			}
+		}
+		
+		escreva("\nNÚMERO DE GIROS: ", cont, "\n")
+	}
+}

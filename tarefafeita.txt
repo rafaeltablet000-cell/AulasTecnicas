@@ -1,0 +1,50 @@
+programa
+{
+	funcao inicio ()
+	{
+		inteiro VetPAR [50]
+		inteiro contador = 0
+		
+		para (inteiro i = 1; i <= 100; i++)
+		{
+			escreva (i + " ")
+			
+			se (i % 2 == 0)
+			{
+				VetPAR[contador] = i
+				contador++
+			}
+		}
+		
+		escreva("\n\nNumero PARES armazenados (ordem original):\n")
+		para(inteiro i = 0; i < 50; i++)
+		{
+			escreva(VetPAR[i], " ")
+		}
+		
+		// 1. Imprima do maior ao menor numero do vetor
+		escreva("\n\n--- 1. Do MAIOR ao MENOR ---\n")
+		para (inteiro i = 49; i >= 0; i--)
+		{
+			escreva(VetPAR[i], " ")
+		}
+		
+		// 2. Imprima a media dos valores do vetor
+		inteiro soma = 0
+		para (inteiro i = 0; i < 50; i++)
+		{
+			soma = soma + VetPAR[i]
+		}
+		real media = soma / 50.0
+		escreva("\n\n--- 2. Media dos valores ---\n")
+		escreva(media)
+		
+		// 3. Imprima o menor numero
+		escreva("\n\n--- 3. Menor numero ---\n")
+		escreva(VetPAR[0])
+		
+		// 4. Imprima o maior numero
+		escreva("\n\n--- 4. Maior numero ---\n")
+		escreva(VetPAR[49])
+	}
+}
